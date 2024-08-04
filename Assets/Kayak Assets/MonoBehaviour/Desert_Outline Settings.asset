@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 830046038, guid: c88ab7b37c4f350242674d2efd621c19, type: 3}
+  m_Name: Desert_Outline Settings
+  m_EditorClassIdentifier:
+  edgeColor: {r: 0, g: 0, b: 0, a: 1}
+  thickness: 2
+  resolutionInvariant: 0
+  fadeWithDistance: 0
+  fadeRangeStart: 10
+  fadeRangeEnd: 50
+  useDepth: 1
+  minDepthThreshold: 12
+  maxDepthThreshold: 15
+  useNormals: 1
+  minNormalsThreshold: 0.25
+  maxNormalsThreshold: 1
+  useColor: 1
+  minColorThreshold: 0.1
+  maxColorThreshold: 0.1
+  renderEvent: 550
+  outlineOnly: 0
+  applyInSceneView: 1
+  effectMaterial: {fileID: 2100000, guid: fcb52ffe466d8304998b100e840a1e63, type: 2}

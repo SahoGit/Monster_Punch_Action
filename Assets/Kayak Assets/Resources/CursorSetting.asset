@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d67d64c6b615b002c0ff306974de8e0, type: 3}
+  m_Name: CursorSetting
+  m_EditorClassIdentifier:
+  normalHand: {fileID: 21300000, guid: 01ca0319ef9795944815fc334f6a16c3, type: 2}
+  tapedHand: {fileID: 21300000, guid: 4ece9da4c87f6414fb870d9136b1e36c, type: 2}
+  DisplayType: 3
+  smooth: 0.4
+  scale: 0.783
+  angle: 0
+  flip: 0
+  centerAdjustment: 0
+  center: {x: -0.14, y: 0.23}
+  fadeInSpeed: 10
+  fadeOutSpeed: 10
+  delayInSpeed: 0
+  delayOutSpeed: 0
+  backToCenter: 0
+  tapedEffect: {fileID: 0}
+  tapedEffectColor: {r: 1, g: 1, b: 1, a: 1}
+  effectSpeed: 1
