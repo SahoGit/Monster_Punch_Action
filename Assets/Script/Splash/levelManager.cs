@@ -11,7 +11,7 @@ public class levelManager : MonoBehaviour
     public void EnemyKilled()
     {
         enemiestokill--;
-        Invoke("LevelLaod", 1.5f);
+        Invoke("LevelLaod", 2f);
         // Check if all enemies are killed
        
     }

@@ -11,6 +11,12 @@ public class TriggerCheck : MonoBehaviour
     public levelManager levelManager;
     public float deactivateDelay = 2f;
 
+    private void Start()
+    {
+        deactivateDelay = 2f;
+        forceMagnitude = 100f;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!hasBeenHit && collision.gameObject.CompareTag("Enemy"))
@@ -24,21 +30,40 @@ public class TriggerCheck : MonoBehaviour
                 enemyAnimator.SetTrigger("Hit");
             }
 
-            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            if (enemyRigidbody != null)
+            Rigidbody [] ragdollRigidbodies = collision.gameObject.GetComponentsInChildren<Rigidbody>();
+
+            if (ragdollRigidbodies.Length > 0)
             {
-                Vector3 forceDirection = collision.contacts[0].point - transform.position;
-                forceDirection = forceDirection.normalized;
+                Vector3 forceDirection = (collision.contacts[0].point - transform.position).normalized;
+                forceDirection = new Vector3(0, 0, 1);
+                foreach (Rigidbody rb in ragdollRigidbodies)
+                {
+                    rb.constraints = RigidbodyConstraints.None;
+                    //rb.constraints = RigidbodyConstraints.FreezePositionX;
+                    //rb.constraints = RigidbodyConstraints.FreezePositionY;
+                    rb.constraints = RigidbodyConstraints.FreezePositionY;
+                    rb.AddForce(forceDirection * forceMagnitude);
+                }
 
-
-                enemyRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-
-
-                enemyRigidbody.AddForce(new Vector3(forceDirection.x, 0, 0) * forceMagnitude, ForceMode.Impulse);
-
-
-                enemyRigidbody.constraints = RigidbodyConstraints.None;
+                //Debug.Log("Hit " + hitTransform.name + " and applied force to its ragdoll parts.");
             }
+
+            //if (enemyRigidbody != null)
+            //{
+            //    Vector3 forceDirection = collision.contacts[0].point - transform.position;
+            //    forceDirection = forceDirection.normalized;
+            //    forceDirection = new Vector3(0, 0, 1);
+
+            //    collision.gameObject.transform.SetParent(null);
+
+            //    //enemyRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+
+            //    enemyRigidbody.constraints = RigidbodyConstraints.None;
+            //    enemyRigidbody.AddForce(forceDirection*forceMagnitude, ForceMode.Impulse);
+
+
+            //    //enemyRigidbody.constraints = RigidbodyConstraints.None;
+            //}
 
             Vector3 hitPoint = collision.contacts[0].point;
             Instantiate(hitEffectPrefab, hitPoint, Quaternion.identity);
