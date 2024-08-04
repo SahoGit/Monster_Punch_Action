@@ -35,7 +35,7 @@ public class CurrencyUi : MonoBehaviour {
 		int _value = PlayerPrefs.GetInt(_currencyName,0);
 		_coinsText.text = "" + _value;
 		_updatedOnce = true;
-		Debug.Log(_value);
+		//Debug.Log(_value);
 	}
 
 	

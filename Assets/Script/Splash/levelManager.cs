@@ -24,6 +24,10 @@ public class levelManager : MonoBehaviour
             if (LevelSelManager.levelNumber < 10)
             {
                 LevelSelManager.levelNumber++;
+                int temp= PlayerPrefs.GetInt("tempLevelNum" + 0, 1);
+                temp++;
+                PlayerPrefs.SetInt("tempLevelNum" + 0, temp);
+
             }
             else
             {

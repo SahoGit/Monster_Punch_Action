@@ -28,10 +28,14 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        AdsManager.instance.CloseBannerAd();
+        //AdsManager.instance.CloseBannerAd();
         InitializeLevel();
         AudioManager.instance.StopBG("Menu");
         AudioManager.instance.PlayBG("GameMusic");
+
+        if (PlayerPrefs.GetInt("tempLevelNum" + 0, 2) % 5 == 0)
+            AdsManager.instance.ShowInterstitialAd();
+ 
     }
 
   
@@ -40,7 +44,8 @@ public class GameManager : MonoBehaviour
       GameObject level = Instantiate(GameLevels[LevelSelManager.levelNumber - 1].gameObject, this.transform.position, this.transform.rotation);
         _currentLevel = level.GetComponent<levelManager>();
         //enemiestokillchk = level.GetComponent<levelManager>()._TotalMoves;
-        _uiManager.LevelNum.text = "LEVEL" + " " + (LevelSelManager.levelNumber).ToString();
+        int tempLevelNum= PlayerPrefs.GetInt("tempLevelNum" + 0, 1);
+        _uiManager.LevelNum.text = "LEVEL" + " " + (tempLevelNum).ToString();
 
     }
 

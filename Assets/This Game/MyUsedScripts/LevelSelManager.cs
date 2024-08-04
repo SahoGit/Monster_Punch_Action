@@ -28,13 +28,13 @@ public class LevelSelManager : MonoBehaviour
             PlayerPrefs.SetInt("currentLevelToPlay", 1);
         }
         int levelReached = PlayerPrefs.GetInt("currentLevelToPlay", 1);
-        UpdateLevelBtns();
+        //UpdateLevelBtns();
         Select(levelReached);
     }
 
     public void Start()
     {
-        AdsManager.instance.RequestBanner();
+        //AdsManager.instance.RequestBanner();
         AudioManager.instance.PlayBG("Menu");
         AudioManager.instance.StopBG("GameMusic");
     }
@@ -81,7 +81,7 @@ public class LevelSelManager : MonoBehaviour
     {
         //  Debug.LogError("dsD|SAda");
         levelNumber = _levelNumber;
-        UpdateBtnsUI(levelNumber);
+       // UpdateBtnsUI(levelNumber);
     }
     void UpdateBtnsUI(int _selectedLvlNum)
     {

@@ -4,6 +4,7 @@ using GoogleMobileAds.Api;
 using System.Collections.Generic;
 using GoogleMobileAds.Common;
 
+
 [Serializable]
 public class IdInfo
 {
@@ -90,23 +91,24 @@ public class AdsManager : MonoBehaviour
                     RequestBanner();
 
                 LoadInterstitialAd();
-                LoadAppOnenAd();
+                //LoadAppOnenAd();
                 //LoadRewardedInterstitialAd();
                 LoadRewardAd();
             });
+          
         }
     }
 
-    public void REDDOG()
-    {
-        PlayerPrefs.SetInt("rrr", 1);
-        PlayerPrefs.Save();
-        CloseBannerAd();
-    }
+    //public void REDDOG()
+    //{
+    //    PlayerPrefs.SetInt("rrr", 1);
+    //    PlayerPrefs.Save();
+    //    CloseBannerAd();
+    //}
 
     public bool GetRedDog()
     {
-        if (PlayerPrefs.GetInt("rrr", 0) == 1)
+        if (PlayerPrefs.GetInt("tempLevelNum"+ 0,2)%5==0)
             return true;
         else
             return false;
@@ -114,8 +116,8 @@ public class AdsManager : MonoBehaviour
     #region BannerMethods
     public void RequestBanner()
     {
-        if (GetRedDog())
-            return;
+        //if (GetRedDog())
+        //    return;
 
         string adUnitId = AllIdsData.BannerAdId;
 
@@ -232,8 +234,8 @@ public class AdsManager : MonoBehaviour
     {
         //AnalyticsImp.Instance.LogEvent("Interstitial_Requested");
 
-        if (GetRedDog())
-            return;
+        //if (GetRedDog())
+        //    return;
 
         // Clean up the old ad before loading a new one.
         if (_interstitialAd != null)
@@ -290,8 +292,8 @@ public class AdsManager : MonoBehaviour
     /// </summary>
     public void ShowInterstitialAd()
     {
-        if (GetRedDog())
-            return;
+        //if (GetRedDog())
+        //    return;
 
         if (_interstitialAd != null && _interstitialAd.CanShowAd())
         {
