@@ -1034,7 +1034,7 @@ MonoBehaviour:
   BannerAdPosition: 1
   BannerBigAdPosition: 1
   bShowBannerAtStart: 1
-  showTestAds: 1
+  showTestAds: 0
   canStartGame: 0
 --- !u!1 &1850838238
 GameObject:
