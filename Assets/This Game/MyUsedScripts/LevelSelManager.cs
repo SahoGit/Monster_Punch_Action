@@ -34,7 +34,7 @@ public class LevelSelManager : MonoBehaviour
 
     public void Start()
     {
-        //AdsManager.instance.RequestBanner();
+        AdsManager.Instance.ShowBanner();
         AudioManager.instance.PlayBG("Menu");
         AudioManager.instance.StopBG("GameMusic");
     }
@@ -46,7 +46,11 @@ public class LevelSelManager : MonoBehaviour
 
     public void RewardedCOins()
     {
-        AdsManager.instance.ShowRewardAdWithDelegate(ADD1000Coins);
+        AdsManager.Instance.ShowRewarded(() =>
+        {
+            ADD1000Coins();
+
+        }, "ADD1000Coins");
     }
 
     void UpdateLevelBtns()

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1b2570cd-b1f9-4c06-b332-09c639eec835\"\n   
+    },\n    \"rs\": {\n      \"key\": \"AdsSettings\",\n      \"value\": {\n       
+    \"ShowInternetPopup\": false,\n        \"ShowAppOpen\": true,\n        \"ShowMediationOn2GB\":
+    true,\n        \"NextInterstitialDelay\": 10\n      },\n      \"type\": \"json\"\n   
+    }\n  }\n]"
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1b2570cd-b1f9-4c06-b332-09c639eec835\"\n   
+    },\n    \"rs\": {\n      \"key\": \"AdsSettings\",\n      \"value\": {\n       
+    \"ShowInternetPopup\": false,\n        \"ShowAppOpen\": true,\n        \"ShowMediationOn2GB\":
+    true,\n        \"NextInterstitialDelay\": 10\n      },\n      \"type\": \"json\"\n   
+    }\n  }\n]"
+  _environments: "[\n  {\n    \"projectId\": \"cf5fab2e-3272-4d97-bcac-3d372e41d659\",\n   
+    \"name\": \"production\",\n    \"id\": \"01e82cbb-0fa7-4932-830b-b1084539e143\",\n   
+    \"isDefault\": true,\n    \"createdAt\": \"2024-08-05T09:52:58Z\",\n    \"updatedAt\":
+    \"2024-08-05T09:52:58Z\"\n  }\n]"

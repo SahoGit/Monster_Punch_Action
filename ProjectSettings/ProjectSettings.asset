@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Pioneer Gamers
-  productName: Monster Smash Punch Action
+  companyName: Uzma Hanif
+  productName: Punching Smash
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -85,7 +85,7 @@ PlayerSettings:
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
   deferSystemGesturesMode: 0
-  hideHomeButton: 0
+  hideHomeButton: 1
   submitAnalytics: 1
   usePlayerLog: 1
   dedicatedServerOptimizations: 0
@@ -163,6 +163,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.pg.action.monstercharge.punchactiongames
     Standalone: com.DefaultCompany.SmashKayak
+    iPhone: com.pg.action.monstercharge.punchactiongames
   buildNumber:
     Standalone: 1
     VisionOS: 0
@@ -186,7 +187,7 @@ PlayerSettings:
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 12.0
+  iOSTargetOSVersionString: 13.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 12.0
@@ -288,7 +289,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 980936f46bd4c914d8834de9b8a27f84, type: 3}
+      m_Icon: {fileID: 2800000, guid: c452951a3ed914ceeb7a967a1c3ec65b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -843,7 +844,9 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: gameanalytics_max_enabled;gameanalytics_admob_enabled
+    iPhone: gameanalytics_max_enabled;gameanalytics_admob_enabled
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -950,13 +953,13 @@ PlayerSettings:
   embeddedLinuxEnableGamepadInput: 1
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
-  apiCompatibilityLevel: 6
+  apiCompatibilityLevel: 3
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 7a709714-620e-4453-a104-3b2c626db3c7
+  cloudProjectId: cf5fab2e-3272-4d97-bcac-3d372e41d659
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Android Monster Punch Action
+  projectName: IOS-Punching Smash
   organizationId: soniaads
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

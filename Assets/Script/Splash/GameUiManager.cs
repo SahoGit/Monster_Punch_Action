@@ -16,7 +16,7 @@ public class GameUiManager : MonoBehaviour
     {
         AudioManager.instance.PlaySFX("Btnclick");
         loadingPanel.LoadScene(1);
-        AdsManager.instance.ShowInterstitialAd();
+        AdsManager.Instance.ShowInterstitial("HomeBtn");
     }
     public void Restart()
     {

@@ -23,7 +23,7 @@ public class Loading : MonoBehaviour
     // The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.
     IEnumerator LoadNewScene(int sceneNum)
     {
-
+        AdsManager.Instance.Initialize_Consent();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneNum);
         asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)

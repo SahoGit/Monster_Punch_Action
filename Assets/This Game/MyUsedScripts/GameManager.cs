@@ -28,14 +28,16 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        //AdsManager.instance.CloseBannerAd();
+        AdsManager.Instance.ShowBanner();
         InitializeLevel();
         AudioManager.instance.StopBG("Menu");
         AudioManager.instance.PlayBG("GameMusic");
 
         if (PlayerPrefs.GetInt("tempLevelNum" + 0, 2) % 5 == 0)
-            AdsManager.instance.ShowInterstitialAd();
- 
+            AdsManager.Instance.ShowInterstitial("LevelStart");
+        if (PlayerPrefs.GetInt("tempLevelNum" + 0, 2) % 6 == 0)
+            UnityEngine.iOS.Device.RequestStoreReview();
+
     }
 
   

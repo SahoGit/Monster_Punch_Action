@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "780784450120",
+    "project_id": "monster-smash-punch-action-ios",
+    "storage_bucket": "monster-smash-punch-action-ios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780784450120:ios:dd8ddb742ceaa9a3c9767d",
+        "android_client_info": {
+          "package_name": "com.pg.action.monstercharge.punchactiongames"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUa0KdDTHGT89m12zUlQ_jI4yTS1ivGW0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

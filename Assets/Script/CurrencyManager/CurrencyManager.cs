@@ -23,15 +23,15 @@ public class CurrencyManager : MonoBehaviour {
 
 	void Awake()
 	{
-		if (!instance)
-		{
+		//if (!instance)
+		//{
 			instance = this;
 			DontDestroyOnLoad(this.gameObject);
-		}
-		else
-		{
-			Destroy(this.gameObject);
-		}
+		//}
+		//else
+		//{
+		//	Destroy(this.gameObject);
+		//}
 		if (!PlayerPrefs.HasKey("firstTimeUpdate"))
 		{
 			PlayerPrefs.SetInt(_coinsPref,PlayerPrefs.GetInt(_coinsPref)+_CoinDefaultValue);

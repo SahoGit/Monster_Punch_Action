@@ -46,15 +46,15 @@ public class AudioManager : MonoBehaviour
 	Sound[] BG;
 	void Awake()
     {
-        if (!instance)
-        {
+        //if (!instance)
+        //{
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        //}
+        //else
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
 
 	void Start()
